@@ -1,101 +1,137 @@
+/* ==========================================================
+   CUSTOM CSS - Branding Selaras Coffee
+   Dimuat setelah Bootstrap 5, berfungsi sebagai lapisan identitas
+   (cokelat espresso + hijau sage) di atas komponen Bootstrap.
+   ========================================================== */
 
 :root {
-  --warnet-hijau: #0d6e52;
-  --warnet-hijau-gelap: #0a5640;
-  --warnet-hijau-muda: #e3f3ee;
-  --warnet-merah: #b30000;
-  --warnet-merah-muda: #fde8e8;
-  --bs-link-color: var(--warnet-hijau);
+  --selaras-cokelat: #5b3a29;
+  --selaras-cokelat-gelap: #43291b;
+  --selaras-cokelat-muda: #efe6df;
+  --selaras-sage: #5f7a4f;
+  --selaras-sage-muda: #e6eee0;
+  --selaras-merah: #a23b2a;
+  --selaras-merah-muda: #f8e5e1;
+  --bs-link-color: var(--selaras-cokelat);
 }
 
 /* Styling Dasar */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f7f4f0;
+  color: #2f2620;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 /* Navbar */
 .brand-box {
   display: inline-block;
-  background-color: var(--warnet-hijau);
+  background-color: var(--selaras-cokelat);
   color: white;
-  padding: 6px 10px;
+  padding: 6px 12px;
   font-weight: bold;
   border-radius: 4px;
   font-size: 16px;
 }
 
 .navbar .nav-link {
-  color: #333;
+  color: #2f2620;
   font-weight: bold;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: var(--warnet-hijau);
+  color: var(--selaras-cokelat);
+  text-decoration: underline;
 }
 
 /* Hero */
 .hero h1 {
-  font-size: 28px;
+  font-size: 32px;
+  color: var(--selaras-cokelat);
 }
 
-/* Kolom Billing */
-.billing-section {
+/* Menu Hari Ini */
+.menu-section {
   background: #ffffff;
   padding: 20px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd2c8;
 }
 
-.tabel-billing th {
-  background-color: #f8f9fa;
+.tabel-menu th {
+  background-color: var(--selaras-cokelat-muda);
   font-size: 14px;
 }
 
-.tabel-billing td {
+.tabel-menu td {
   font-size: 14px;
 }
 
-.status-kosong {
-  color: var(--warnet-hijau);
+.status-tersedia {
+  color: var(--selaras-sage);
   font-weight: bold;
-  background-color: var(--warnet-hijau-muda);
+  background-color: var(--selaras-sage-muda);
   padding: 3px 8px;
   border-radius: 3px;
 }
 
-.status-pakai {
-  color: var(--warnet-merah);
+.status-habis {
+  color: var(--selaras-merah);
   font-weight: bold;
-  background-color: var(--warnet-merah-muda);
+  background-color: var(--selaras-merah-muda);
   padding: 3px 8px;
   border-radius: 3px;
 }
 
-/* Card Tarif */
+/* Card Produk */
 .card {
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd2c8;
+}
+
+.card-foto {
+  height: 260px;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
+}
+
+.foto-kopi-susu {
+  object-position: center 70%;
 }
 
 .card-utama {
-  border-color: var(--warnet-hijau);
+  border-color: var(--selaras-cokelat);
   border-width: 2px;
 }
 
 .harga {
   font-size: 18px;
   font-weight: bold;
-  color: var(--warnet-hijau);
+  color: var(--selaras-cokelat);
 }
 
 .card ul {
   padding-left: 15px;
-  color: #555;
+  color: #5c4f46;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+/* Alert Promo */
+.alert-selaras {
+  background-color: var(--selaras-cokelat-muda);
+  border: 1px solid var(--selaras-cokelat);
+  border-left-width: 5px;
+  color: var(--selaras-cokelat-gelap);
+}
+
+.alert-selaras .alert-link {
+  color: var(--selaras-cokelat);
+  font-weight: bold;
 }
 
 /* Kontak */
@@ -103,56 +139,43 @@ body {
   background: #ffffff;
   padding: 30px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd2c8;
 }
 
 .form-control:focus {
-  border-color: var(--warnet-hijau);
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 82, 0.2);
+  border-color: var(--selaras-cokelat);
+  box-shadow: 0 0 0 0.2rem rgba(91, 58, 41, 0.2);
 }
 
-.btn-warnet {
-  background-color: var(--warnet-hijau);
-  border-color: var(--warnet-hijau);
+.btn-selaras {
+  background-color: var(--selaras-cokelat);
+  border-color: var(--selaras-cokelat);
   color: #fff;
 }
 
-.btn-warnet:hover,
-.btn-warnet:focus {
-  background-color: var(--warnet-hijau-gelap);
-  border-color: var(--warnet-hijau-gelap);
+.btn-selaras:hover,
+.btn-selaras:focus {
+  background-color: var(--selaras-cokelat-gelap);
+  border-color: var(--selaras-cokelat-gelap);
   color: #fff;
-}
-
-/* Alert Promo */
-.alert-warnet {
-  background-color: var(--warnet-hijau-muda);
-  border: 1px solid var(--warnet-hijau);
-  border-left-width: 5px;
-  color: var(--warnet-hijau-gelap);
-}
-
-.alert-warnet .alert-link {
-  color: var(--warnet-hijau);
-  font-weight: bold;
 }
 
 /* Modal */
-.modal-header-warnet {
-  background-color: var(--warnet-hijau);
+.modal-header-selaras {
+  background-color: var(--selaras-cokelat);
   color: #fff;
 }
 
 /* Footer */
 .footer {
-  background: #333;
+  background: var(--selaras-cokelat-gelap);
   color: white;
   font-size: 14px;
 }
 
-
+/* Responsif tambahan (selain grid & navbar-expand bawaan Bootstrap) */
 @media (max-width: 767.98px) {
-  .billing-section,
+  .menu-section,
   .kontak-section {
     padding: 15px;
   }

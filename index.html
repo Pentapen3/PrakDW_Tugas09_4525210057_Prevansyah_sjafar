@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>pen WARNET - Warnet & Ruang Nugas</title>
+  <title>Selaras Coffee - Kopi Lokal untuk Setiap Hari</title>
 
+  <!-- Bootstrap 5 CSS (CDN) -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS Eksternal (custom / branding) - dimuat setelah Bootstrap agar bisa menimpa -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR (Bootstrap: navbar + navbar-expand-md + collapse) -->
   <nav class="navbar navbar-expand-md bg-white border-bottom sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#beranda">
-        <span class="brand-box">pen WARNET</span>
+        <span class="brand-box">Selaras Coffee</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#menuUtama" aria-controls="menuUtama"
@@ -24,8 +27,8 @@
       <div class="collapse navbar-collapse" id="menuUtama">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
-          <li class="nav-item"><a class="nav-link" href="#billing">Cek Billing</a></li>
-          <li class="nav-item"><a class="nav-link" href="#tarif">Tarif & Zona</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu Hari Ini</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
           <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
         </ul>
       </div>
@@ -37,84 +40,97 @@
 
     <!-- HERO SECTION -->
     <section class="hero text-center py-5">
-      <h1 class="fw-bold">Selamat Datang di pen WARNET</h1>
-      <p class="lead mb-0">Warnet dan tempat nugas nyaman, cepat, serta harga terjangkau untuk pelajar dan mahasiswa.</p>
+      <h1 class="fw-bold">Selamat Datang di Selaras Coffee</h1>
+      <p class="lead mb-0">Kopi lokal dengan rasa seimbang, harga bersahabat, dan tempat nyaman untuk pelanggan maupun mitra bisnis.</p>
     </section>
 
     <!-- ALERT PROMO (Bootstrap: alert + alert-dismissible) -->
-    <div class="alert alert-warnet alert-dismissible fade show mb-5" role="alert">
-      <strong>Promo Mahasiswa!</strong> Diskon 20% untuk paket 3 jam Zona Reguler setiap Senin - Kamis.
+    <div class="alert alert-selaras alert-dismissible fade show mb-5" role="alert">
+      <strong>Promo Pelanggan Baru!</strong> Beli 2 minuman kopi, gratis 1 pastry setiap Senin - Kamis.
       <a href="#" class="alert-link" data-bs-toggle="modal" data-bs-target="#modalPromo">Lihat syarat promo</a>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
     </div>
 
-    <!-- KOLOM MONITOR BILLING / STATUS PC -->
-    <section class="billing-section mb-5" id="billing">
-      <h2 class="h4">Kolom Status Billing &amp; Komputer</h2>
-      <p>Pantau status ketersediaan PC secara langsung:</p>
+    <!-- MENU HARI INI -->
+    <section class="menu-section mb-5" id="menu">
+      <h2 class="h4">Menu Hari Ini</h2>
+      <p>Cek ketersediaan minuman dan makanan ringan sebelum berkunjung:</p>
 
-      
+      <!-- Tabel Menu (Bootstrap: table + table-responsive) -->
       <div class="table-responsive">
-        <table class="table table-bordered align-middle tabel-billing mb-0">
+        <table class="table table-bordered align-middle tabel-menu mb-0">
           <thead>
             <tr>
-              <th>Nomor PC</th>
-              <th>Zona</th>
+              <th>Menu</th>
+              <th>Kategori</th>
+              <th>Harga</th>
               <th>Status</th>
-              <th>Sisa Waktu / Member</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>PC-01</strong></td>
-              <td>Reguler</td>
-              <td><span class="status-kosong">Kosong</span></td>
-              <td>-</td>
+              <td><strong>Kopi Susu Selaras</strong></td>
+              <td>Kopi</td>
+              <td>Rp 18.000</td>
+              <td><span class="status-tersedia">Tersedia</span></td>
             </tr>
             <tr>
-              <td><strong>PC-02</strong></td>
-              <td>Reguler</td>
-              <td><span class="status-pakai">Terpakai</span></td>
-              <td>MBR-104 (85 menit)</td>
+              <td><strong>Es Kopi Aren</strong></td>
+              <td>Kopi</td>
+              <td>Rp 20.000</td>
+              <td><span class="status-tersedia">Tersedia</span></td>
             </tr>
             <tr>
-              <td><strong>PC-03</strong></td>
-              <td>Arena Esports</td>
-              <td><span class="status-kosong">Kosong</span></td>
-              <td>-</td>
+              <td><strong>Americano</strong></td>
+              <td>Kopi</td>
+              <td>Rp 16.000</td>
+              <td><span class="status-tersedia">Tersedia</span></td>
             </tr>
             <tr>
-              <td><strong>PC-04</strong></td>
-              <td>Arena Esports</td>
-              <td><span class="status-pakai">Terpakai</span></td>
-              <td>MBR-219 (42 menit)</td>
+              <td><strong>V60 Manual Brew</strong></td>
+              <td>Kopi</td>
+              <td>Rp 25.000</td>
+              <td><span class="status-habis">Habis</span></td>
             </tr>
             <tr>
-              <td><strong>PC-05</strong></td>
-              <td>Bilik Privat</td>
-              <td><span class="status-kosong">Kosong</span></td>
-              <td>-</td>
+              <td><strong>Teh Tarik Rempah</strong></td>
+              <td>Non-kopi</td>
+              <td>Rp 15.000</td>
+              <td><span class="status-tersedia">Tersedia</span></td>
+            </tr>
+            <tr>
+              <td><strong>Matcha Latte</strong></td>
+              <td>Non-kopi</td>
+              <td>Rp 22.000</td>
+              <td><span class="status-tersedia">Tersedia</span></td>
+            </tr>
+            <tr>
+              <td><strong>Croissant Butter</strong></td>
+              <td>Pastry</td>
+              <td>Rp 16.000</td>
+              <td><span class="status-habis">Habis</span></td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 3 CARD / KARTU TARIF (Bootstrap: grid row + col-md-4 + card) -->
-    <h2 class="judul-section text-center mb-4" id="tarif">Daftar Paket & Zona</h2>
+    <!-- 3 CARD / KARTU PRODUK (Bootstrap: grid row + col-md-4 + card) -->
+    <h2 class="judul-section text-center mb-4" id="produk">Produk Unggulan</h2>
     <div class="row g-4 mb-5">
 
       <!-- Card 1 -->
       <div class="col-12 col-md-4">
         <div class="card h-100">
+          <img src="img/src/ESKOPISUSU.jpg" class="card-img-top card-foto foto-kopi-susu" alt="Segelas es kopi susu Selaras dengan lapisan kopi dan susu">
           <div class="card-body">
-            <h3 class="h5 card-title">Zona Reguler</h3>
-            <p class="harga">Rp 6.000 / jam</p>
-            <p class="card-text">Cocok untuk browsing, nugas kuliah, dan game ringan.</p>
+            <h3 class="h5 card-title">Kopi Susu Selaras</h3>
+            <p class="harga">Rp 18.000</p>
+            <p class="card-text">Perpaduan espresso dan susu segar yang lembut, cocok untuk teman santai sehari-hari.</p>
             <ul>
-              <li>Intel Core i5</li>
-              <li>RAM 16 GB</li>
-              <li>Monitor 144Hz</li>
+              <li>Espresso blend Arabika-Robusta</li>
+              <li>Susu segar</li>
+              <li>Pilihan panas atau dingin</li>
             </ul>
           </div>
         </div>
@@ -123,14 +139,15 @@
       <!-- Card 2 -->
       <div class="col-12 col-md-4">
         <div class="card card-utama h-100">
+          <img src="img/src/ESKOPISUSUGULAAREN.jpg" class="card-img-top card-foto" alt="Es kopi aren dengan es batu dan sedotan hitam">
           <div class="card-body">
-            <h3 class="h5 card-title">Zona Arena Esports</h3>
-            <p class="harga">Rp 10.000 / jam</p>
-            <p class="card-text">Performa tinggi untuk game berat dan turnamen.</p>
+            <h3 class="h5 card-title">Es Kopi Aren</h3>
+            <p class="harga">Rp 20.000</p>
+            <p class="card-text">Menu andalan kami: kopi dingin dengan manis gula aren yang pas dan tidak berlebihan.</p>
             <ul>
-              <li>Ryzen 7 & RTX 4060</li>
-              <li>RAM 32 GB</li>
-              <li>Monitor 240Hz</li>
+              <li>Gula aren asli</li>
+              <li>Espresso double shot</li>
+              <li>Paling sering dipesan</li>
             </ul>
           </div>
         </div>
@@ -139,14 +156,15 @@
       <!-- Card 3 -->
       <div class="col-12 col-md-4">
         <div class="card h-100">
+          <img src="img/src/bijikopi.jpg" class="card-img-top card-foto" alt="Biji kopi pilihan Selaras Coffee">
           <div class="card-body">
-            <h3 class="h5 card-title">Bilik Privat Nugas</h3>
-            <p class="harga">Rp 14.000 / jam</p>
-            <p class="card-text">Ruangan tenang dengan kursi ergonomis.</p>
+            <h3 class="h5 card-title">Biji Kopi Kemasan</h3>
+            <p class="harga">Rp 85.000 / 200 gram</p>
+            <p class="card-text">Biji kopi pilihan untuk diseduh di rumah, juga tersedia untuk pemesanan mitra bisnis.</p>
             <ul>
-              <li>Meja Luas</li>
-              <li>Monitor QHD 27 inch</li>
-              <li>Suasana Tenang</li>
+              <li>Roasting medium</li>
+              <li>Bisa digiling sesuai alat seduh</li>
+              <li>Harga khusus untuk mitra</li>
             </ul>
           </div>
         </div>
@@ -154,48 +172,53 @@
 
     </div>
 
-    
+    <!-- FORM KONTAK (Bootstrap: form-label + form-control + btn) -->
     <section class="kontak-section mb-5" id="kontak">
       <h2 class="h4">Form Kontak</h2>
-      <p>Kirim pesan kepada pengelola warnet.</p>
+      <p>Kirim pertanyaan, pesanan, atau ajakan kerja sama kepada Selaras Coffee.</p>
 
       <form>
         <div class="mb-3">
           <label for="nama" class="form-label">Nama:</label>
-          <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Anda">
+          <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Anda" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required>
         </div>
 
         <div class="mb-3">
           <label for="pesan" class="form-label">Pesan:</label>
-          <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Tulis pesan..."></textarea>
+          <textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Tulis pesan..." required></textarea>
         </div>
 
-        <button type="submit" class="btn btn-warnet">Kirim Pesan</button>
+        <button type="submit" class="btn btn-selaras">Kirim Pesan</button>
       </form>
     </section>
 
   </main>
 
-  
+  <!-- MODAL SYARAT PROMO (Bootstrap: modal + modal-dialog) -->
   <div class="modal fade" id="modalPromo" tabindex="-1" aria-labelledby="judulModalPromo" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header modal-header-warnet">
-          <h2 class="modal-title h5" id="judulModalPromo">Syarat &amp; Ketentuan Promo Mahasiswa</h2>
+        <div class="modal-header modal-header-selaras">
+          <h2 class="modal-title h5" id="judulModalPromo">Syarat &amp; Ketentuan Promo</h2>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Tutup"></button>
         </div>
         <div class="modal-body">
-          <p>Promo diskon 20% berlaku dengan ketentuan berikut:</p>
+          <p>Promo "Beli 2 Gratis 1 Pastry" berlaku dengan ketentuan berikut:</p>
           <ul class="mb-0">
-            <li>Berlaku untuk paket 3 jam di Zona Reguler.</li>
-            <li>Berlaku Senin sampai Kamis, pukul 01.00 - 24.00.</li>
-            <li>Tunjukkan kartu mahasiswa aktif kepada operator.</li>
+            <li>Berlaku untuk pembelian 2 minuman kopi dalam satu transaksi.</li>
+            <li>Berlaku Senin sampai Kamis, pukul 08.00 - 17.00.</li>
+            <li>Pastry gratis sesuai stok yang tersedia hari itu.</li>
             <li>Tidak dapat digabung dengan promo lain.</li>
           </ul>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Tutup</button>
-          <a href="#kontak" class="btn btn-warnet" data-bs-dismiss="modal">Tanya Pengelola</a>
+          <a href="#kontak" class="btn btn-selaras" data-bs-dismiss="modal">Tanya Kami</a>
         </div>
       </div>
     </div>
@@ -203,10 +226,10 @@
 
   <!-- FOOTER -->
   <footer class="footer text-center py-3">
-    <p class="mb-0">&copy; 2026 pen WARNET. Tugas Desain Web.</p>
+    <p class="mb-0">&copy; 2026 Selaras Coffee. Tugas Desain Web.</p>
   </footer>
 
-  
+  <!-- Bootstrap 5 JS Bundle (CDN) - dibutuhkan untuk hamburger navbar, alert, dan modal -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
