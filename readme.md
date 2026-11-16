@@ -6,9 +6,9 @@
 | **NPM** | 4525210057 |
 | **Mata Kuliah** | Desain Web |
 | **Kelas** | A |
-| **Tugas** | Tugas Individu – Website Company Profile / UMKM (One Page Website) |
+| **Tugas** | Tugas pertemuan 9 – Website Company Profile / UMKM (One Page Website) |
 | **Studi kasus** | UMKM Selaras Coffee |
-| **Jenis tugas** | Individu (tidak ada pembagian peran kelompok) |
+
 
 ## Gambaran Singkat
 
@@ -21,6 +21,7 @@ Website satu halaman berbasis **Bootstrap 5** (via CDN) untuk UMKM **Selaras Cof
 ├── css/style.css     → custom CSS (identitas & responsif)
 ├── img/              → screenshot desktop & mobile
 │   └── src/          → foto produk (ESKOPISUSU.jpg, ESKOPISUSUGULAAREN.jpg, bijikopi.jpg)
+|   └── ss/          → foto output
 └── readme.md
 ```
 
