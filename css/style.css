@@ -1,0 +1,159 @@
+
+:root {
+  --warnet-hijau: #0d6e52;
+  --warnet-hijau-gelap: #0a5640;
+  --warnet-hijau-muda: #e3f3ee;
+  --warnet-merah: #b30000;
+  --warnet-merah-muda: #fde8e8;
+  --bs-link-color: var(--warnet-hijau);
+}
+
+/* Styling Dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navbar */
+.brand-box {
+  display: inline-block;
+  background-color: var(--warnet-hijau);
+  color: white;
+  padding: 6px 10px;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.navbar .nav-link {
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--warnet-hijau);
+}
+
+/* Hero */
+.hero h1 {
+  font-size: 28px;
+}
+
+/* Kolom Billing */
+.billing-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.tabel-billing th {
+  background-color: #f8f9fa;
+  font-size: 14px;
+}
+
+.tabel-billing td {
+  font-size: 14px;
+}
+
+.status-kosong {
+  color: var(--warnet-hijau);
+  font-weight: bold;
+  background-color: var(--warnet-hijau-muda);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.status-pakai {
+  color: var(--warnet-merah);
+  font-weight: bold;
+  background-color: var(--warnet-merah-muda);
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+/* Card Tarif */
+.card {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.card-utama {
+  border-color: var(--warnet-hijau);
+  border-width: 2px;
+}
+
+.harga {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--warnet-hijau);
+}
+
+.card ul {
+  padding-left: 15px;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Kontak */
+.kontak-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus {
+  border-color: var(--warnet-hijau);
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 82, 0.2);
+}
+
+.btn-warnet {
+  background-color: var(--warnet-hijau);
+  border-color: var(--warnet-hijau);
+  color: #fff;
+}
+
+.btn-warnet:hover,
+.btn-warnet:focus {
+  background-color: var(--warnet-hijau-gelap);
+  border-color: var(--warnet-hijau-gelap);
+  color: #fff;
+}
+
+/* Alert Promo */
+.alert-warnet {
+  background-color: var(--warnet-hijau-muda);
+  border: 1px solid var(--warnet-hijau);
+  border-left-width: 5px;
+  color: var(--warnet-hijau-gelap);
+}
+
+.alert-warnet .alert-link {
+  color: var(--warnet-hijau);
+  font-weight: bold;
+}
+
+/* Modal */
+.modal-header-warnet {
+  background-color: var(--warnet-hijau);
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  font-size: 14px;
+}
+
+
+@media (max-width: 767.98px) {
+  .billing-section,
+  .kontak-section {
+    padding: 15px;
+  }
+}
